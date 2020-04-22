@@ -27,3 +27,5 @@ I hooked it all up and plugged the RPi into a second HDMI port on the back of th
 Even the lower-level Broadcom APIs don't really give me the level of control that I want, but I did manage to get something working here, by telling the underlying framework code that the RPi is the TV, which allowed it to intercept traffic that was targeting my actual TV. (I can't see anything the TV sends to the other devices, only messages going to the TV.) This allows me to see the Roku's power on and off messages at least, and I can send messages from the "fake TV" to the soundbar.
 
 Download/compile/run on the raspberry pi itself, as it references some firmware libraries that are only available on the device. Just type 'make' to build it, then './cec-fix' to run.
+
+To set it up to run on boot, see the [raspberry pi docs for cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md).
